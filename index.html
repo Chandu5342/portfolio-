@@ -7,21 +7,28 @@
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="resume.css" />
+   <!-- Font Awesome 6 (Latest) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
   </head>
   <body>
     <nav id="desktop-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Chandu Karri</div>
       <div>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
+          
         </ul>
       </div>
     </nav>
     <nav id="hamburger-nav">
-      <div class="logo">John Doe</div>
+      <div class="logo">Chandu Karri</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
@@ -30,7 +37,7 @@
         </div>
         <div class="menu-links">
           <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#resume" onclick="toggleMenu()">Resume</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
           <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
         </div>
@@ -38,50 +45,44 @@
     </nav>
     <section id="profile">
       <div class="section__pic-container">
-        <img src="./assets/profile-pic.png" alt="John Doe profile picture" />
+        <img src="./assets/prf1.png" alt="John Doe profile picture" />
       </div>
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">John Doe</h1>
-        <p class="section__text__p2">Frontend Developer</p>
+        <h1 class="title">Chandu Karri</h1>
+        <p class="section__text__p2">Full Stack Developer</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
-            onclick="window.open('./assets/resume-example.pdf')"
+            onclick="window.open('./assets/MENet.pdf')"
           >
             Download CV
           </button>
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          <a href="#contact"></a><button class="btn btn-color-1" >
             Contact Info
-          </button>
+          </button></a>
         </div>
         <div id="socials-container">
           <img
             src="./assets/linkedin.png"
             alt="My LinkedIn profile"
             class="icon"
-            onclick="location.href='https://linkedin.com/'"
+            onclick="location.href='www.linkedin.com/in/chandu-karri-8b583a2b4'"
           />
           <img
             src="./assets/github.png"
             alt="My Github profile"
             class="icon"
-            onclick="location.href='https://github.com/'"
+            onclick="location.href='https://github.com/Chandu5342'"
           />
         </div>
       </div>
     </section>
     <section id="about">
+    
       <p class="section__text__p1">Get To Know More</p>
       <h1 class="title">About Me</h1>
       <div class="section-container">
-        <div class="section__pic-container">
-          <img
-            src="./assets/about-pic.png"
-            alt="Profile picture"
-            class="about-pic"
-          />
-        </div>
         <div class="about-details-container">
           <div class="about-containers">
             <div class="details-container">
@@ -91,7 +92,7 @@
                 class="icon"
               />
               <h3>Experience</h3>
-              <p>2+ years <br />Frontend Development</p>
+              <p class="addtxt"> 1+ years <br />Web Developer Intern</p>
             </div>
             <div class="details-container">
               <img
@@ -100,17 +101,14 @@
                 class="icon"
               />
               <h3>Education</h3>
-              <p>B.Sc. Bachelors Degree<br />M.Sc. Masters Degree</p>
+              <p class="addtxt"> Diploma in CSE<br />B.Tech in CSE</p>
             </div>
           </div>
           <div class="text-container">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
-              reprehenderit et laborum, rem, dolore eum quod voluptate
-              exercitationem nobis, nihil esse debitis maxime facere minus sint
-              delectus velit in eos quo officiis explicabo deleniti dignissimos.
-              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
-              reiciendis ea magnam? Nulla, impedit fuga!
+            <p class="addtxt">
+              I’m a passionate and detail-oriented final-year B.Tech student specializing in full-stack web and mobile application development. With hands-on experience in both the .NET ecosystem (Blazor, MAUI) and the MERN stack, I love building modern, responsive, and scalable applications.
+
+              I have a solid foundation in Data Structures & Algorithms, and I enjoy solving complex problems and bringing real-world ideas to life through clean and efficient cod
             </p>
           </div>
         </div>
@@ -122,140 +120,125 @@
         onclick="location.href='./#experience'"
       />
     </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>HTML</h3>
-                  <p>Experienced</p>
+   
+
+     <!-- Resume Section -->
+     <section id="resume">
+      <div class="resuemeblock">
+
+         <div class="sidebar">
+          <h1 >Why hire Me?</h1>
+          <p>Here is my so far Career Milestone</p>
+          <br>
+              <button class="tab active" onclick="showTab('experience')">Experience</button>
+              <button class="tab" onclick="showTab('education')">Education</button>
+              <button class="tab" onclick="showTab('skills')">Skills</button>
+              <button class="tab" onclick="showTab('about', event)">About Me</button>
+
+              <!-- <button class="tab" onclick="showTab('profiles')">Profiles</button> -->
+         </div>
+         <div class="contentdiv">
+                <div id="experience" class="tab-content active">
+                    <h1>My Experience</h1>
+                    <br>
+                    <p class="addtxt">I have 1 year of internship experience at Sampath Software Solutions, where I worked on web and Android app development using .NET Blazor and MAUI.</p>
+                    <div class="experience-box">
+                      <p class="date">March 2023 - March 2024</p>
+                      <h3>Full Stack Developer Intern</h3>
+                      <h5>• Sampath Software Solutions</h5>
+                      <p class="details">
+                        <ul class="listdetails">
+                          <li>Developed responsive web applications using <strong>.NET Blazor</strong> and built Android applications with <strong>MAUI</strong>.</li>
+                          <li>Implemented CRUD operations, integrated APIs, and managed databases using <strong>MS SQL Server</strong>. </li>
+                          <li>Collaborated with cross-functional teams to deliver real-time software solutions and improve system performance.</li>
+                      </ul>
+                      </p>
+                     </div>
+                  
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>CSS</h3>
-                  <p>Experienced</p>
+
+                <div id="education" class="tab-content">
+                  <h1>My Education</h1>
+                  <br>
+                  <div class="EducDet">
+                      <div class="education-box">
+                        <p class="date">Aug 2023 - Pursuing</p>
+                        <h3>Bachelor of Technology (B.Tech) in Computer Science</h3>
+                        <h5 class="college">• Vignan's Institue of Information Technology, Devvada</h5>
+                        <p class="grade addtxt">CGPA: 8.5 / 10</p>
+                      </div>
+                    
+                      <div class="education-box">
+                        <p class="date">Oct 2020 - June 023</p>
+                        <h3>Diploma in Computer Science</h3>
+                        <h5 class="college">• Andhara Polytechnic College, Kakinada</h5>
+                        <p class="grade addtxt">CGPA: 8.7/ 10</p>
+                      </div>
+                      
+                   
+                      
+                    </div>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>SASS</h3>
-                  <p>Intermediate</p>
+
+                <div id="skills" class="tab-content">
+                          <h2>My Skills</h2>
+
+                          <div class="skills-container">
+                              <!-- Frontend Skills -->
+                              <div class="skill-category">
+                                  <h3>Frontend</h3>
+                                  <div class="skills-grid">
+                                      <div class="skill-card"><i class="fa-brands fa-html5 ic"></i></div>
+                                      <div class="skill-card"><i class="fa-brands fa-css3-alt ic"></i></div>
+                                      <div class="skill-card"><i class="fa-brands fa-js ic"></i></div>
+                                      <div class="skill-card"><i class="fa-brands fa-react ic"></i></div>
+                                      <div class="skill-card"><img src="assets/blazorp.png " alt="blazor"></div>
+                                  </div>
+                              </div>
+                      
+                              <!-- Backend Skills -->
+                              <div class="skill-category">
+                                  <h3>Backend</h3>
+                                  <div class="skills-grid">
+                                      <div class="skill-card"><img src="assets/netcore.png" alt="C#"></div>
+                                      <div class="skill-card"><i class="fa-brands fa-node-js ic"></i></div>
+                                  </div>
+                              </div>
+                      
+                              <!-- Database Skills -->
+                              <div class="skill-category">
+                                  <h3>Database</h3>
+                                  <div class="skills-grid">
+                                      <div class="skill-card"><i class="fa-solid fa-database ic"></i></div>
+                                      <div class="skill-card"><img src="assets/mongodb-icon-lg.png" alt="MongoDB"></div>
+                                  </div>
+                              </div>
+                      
+                              <!-- Tools -->
+                              <div class="skill-category">
+                                  <h3>Tools</h3>
+                                  <div class="skills-grid">
+                                      <div class="skill-card"><i class="fa-brands fa-github ic"></i></div>
+                                      <div class="skill-card"><i class="fa-brands fa-figma ic"></i></div>
+                                  </div>
+                              </div>
+                          </div>
+                   </div>
+
+                <div id="about" class="tab-content">
+                    <h2>About Me</h2>
+                    <p>I am a passionate full-stack dfgdffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffgfeveloper working on modern web technologies.</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>JavaScript</h3>
-                  <p>Basic</p>
+
+                <div id="profiles" class="tab-content">
+                    <h2>Profiles</h2>
+                    <p>LinkedIn | GitHub | Portfolio</p>
                 </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>TypeScript</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Material UI</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Frontend Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>PostgreSQL</h3>
-                  <p>Basic</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Node JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Express JS</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./assets/checkmark.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
+         </div>
       </div>
-      <img
-        src="./assets/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
+     
+   </section>
+
     <section id="projects">
       <p class="section__text__p1">Browse My Recent</p>
       <h1 class="title">Projects</h1>
@@ -264,22 +247,22 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-1.png"
+                src="./assets/DSA.png"
                 alt="Project 1"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">DSA Dashboard</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://github.com/Chandu5342/DSA.git'"
               >
                 Github
               </button>
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="location.href='https://dsa-mauve.vercel.app/'"
               >
                 Live Demo
               </button>
@@ -288,20 +271,20 @@
           <div class="details-container color-container">
             <div class="article-container">
               <img
-                src="./assets/project-2.png"
+                src="./assets/Canteen.png"
                 alt="Project 2"
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <h2 class="experience-sub-title project-title">Online Order Canteen</h2>
             <div class="btn-container">
-              <button
+              <button disabled
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/'"
               >
                 Github
               </button>
-              <button
+              <button disabled
                 class="btn btn-color-2 project-btn"
                 onclick="location.href='https://github.com/'"
               >
@@ -309,30 +292,7 @@
               </button>
             </div>
           </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./assets/project-3.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Project Three</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
+        
         </div>
       </div>
       <img
@@ -352,7 +312,7 @@
             alt="Email icon"
             class="icon contact-icon email-icon"
           />
-          <p><a href="mailto:examplemail@gmail.com">Example@gmail.com</a></p>
+          <p><a href="mailto:examplemail@gmail.com">karrichandu309.com</a></p>
         </div>
         <div class="contact-info-container">
           <img
@@ -360,7 +320,7 @@
             alt="LinkedIn icon"
             class="icon contact-icon"
           />
-          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+          <p><a href="www.linkedin.com/in/chandu-karri-8b583a2b4">LinkedIn</a></p>
         </div>
       </div>
     </section>
@@ -369,14 +329,15 @@
         <div class="nav-links-container">
           <ul class="nav-links">
             <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
-      <p>Copyright &#169; 2023 John Doe. All Rights Reserved.</p>
+      <p>Copyright &#169; 2025 Chandu Karri. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
+
   </body>
 </html>

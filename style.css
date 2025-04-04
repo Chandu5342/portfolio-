@@ -9,6 +9,8 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #0a192f; /* Navy black */
+  color: #ccd6f6; /* Light Blue */
 }
 
 html {
@@ -31,18 +33,23 @@ a,
 nav,
 .nav-links {
   display: flex;
+  
 }
 
 nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  background-color: #112240; /* Dark navy */
+  color: #64ffda; /* Cyan */
 }
 
 .nav-links {
   gap: 2rem;
   list-style: none;
   font-size: 1.5rem;
+  color: white;
+  opacity: 0.8;
 }
 
 a {
@@ -52,10 +59,11 @@ a {
 }
 
 a:hover {
-  color: grey;
-  text-decoration: underline;
+ 
   text-underline-offset: 1rem;
   text-decoration-color: rgb(181, 181, 181);
+  color: #ffffff;
+  text-decoration-color: #64ffda;
 }
 
 .logo {
@@ -187,16 +195,21 @@ section {
 
 .section__text__p1 {
   text-align: center;
+  color: white;
+  opacity: 0.8;
 }
 
 .section__text__p2 {
   font-size: 1.75rem;
   margin-bottom: 1rem;
+  color: white;
+  opacity: 0.8;
 }
 
 .title {
   font-size: 3rem;
   text-align: center;
+  color: #ffffff;
 }
 
 #socials-container {
@@ -260,7 +273,26 @@ section {
 .btn-container {
   gap: 1rem;
 }
+/* Buttons */
+.btn-color-1 {
+  background: #64ffda;
+  color: #0a192f;
+}
 
+.btn-color-1:hover {
+  background: #ffffff;
+  color: #0a192f;
+}
+
+.btn-color-2 {
+  border: 2px solid #64ffda;
+  color: #ffffff;
+}
+
+.btn-color-2:hover {
+  background: #64ffda;
+  color: #0a192f;
+}
 /* ABOUT SECTION */
 
 #about {
@@ -296,11 +328,14 @@ section {
 .details-container {
   padding: 1.5rem;
   flex: 1;
-  background: white;
+ 
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
+
   border-color: rgb(163, 163, 163);
   text-align: center;
+  background: #112240;
+  border: 1px solid #64ffda;
+
 }
 
 .section-container {
@@ -321,7 +356,7 @@ section {
 }
 
 .experience-sub-title {
-  color: rgb(85, 85, 85);
+  color: #ffffff;
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
@@ -362,6 +397,7 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  
 }
 
 .project-img {
@@ -393,10 +429,12 @@ article .icon {
   display: flex;
   justify-content: center;
   border-radius: 2rem;
-  border: rgb(53, 53, 53) 0.1rem solid;
+ 
   border-color: rgb(163, 163, 163);
-  background: (250, 250, 250);
+ 
   margin: 2rem auto;
+  border: 1px solid #64ffda;
+  background: #112240;
   padding: 0.5rem;
 }
 
@@ -410,6 +448,7 @@ article .icon {
 
 .contact-info-container p {
   font-size: larger;
+  color: #ffffff;
 }
 
 .contact-icon {
@@ -429,4 +468,141 @@ footer {
 
 footer p {
   text-align: center;
+}
+/* Projects */
+.color-container {
+  border: 1px solid #64ffda;
+  background: #112240;
+}
+
+.project-title {
+  color: #64ffda;
+}
+
+.project-btn {
+  color: #64ffda;
+  border: 1px solid #64ffda;
+}
+
+/* Contact */
+.contact-info-upper-container {
+  border: 1px solid #64ffda;
+  background: #112240;
+}
+
+.contact-info-container p {
+  color: #64ffda;
+}
+
+
+
+
+
+
+
+
+
+/* Main Layout */
+main {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+.res{
+  display: flex;
+}
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  color: white;
+ 
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.tab.active {
+  background: #00ff80;
+  color: black;
+  font-weight: bold;
+}
+
+.tab:hover {
+  background: #00cc66;
+}
+
+/* Content Section */
+.content {
+  flex: 1;
+  padding: 40px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.experience-box {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.education-box {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 15px;
+  width: calc(50% - 10px); /* two boxes per row */
+  box-sizing: border-box;
+}
+.date {
+  color: #00ff80;
+  font-weight: bold;
+}
+
+.company {
+ 
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+      flex-direction: column;
+  }
+  
+  .sidebar {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+  }
+
+  .tab {
+      flex: 1;
+      text-align: center;
+      margin-bottom: 0;
+  }
+
+  .content {
+      padding: 20px;
+  }
 }
