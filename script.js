@@ -24,3 +24,6 @@ function showTab(tabId, event) {
   // Highlight the clicked button
   event.currentTarget.classList.add('active');
 }
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('active');
+}

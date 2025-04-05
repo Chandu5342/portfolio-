@@ -111,6 +111,8 @@
     }
     .sidebar{
         width: 93%;
+        margin-left: -8px;
+        height: 13rem;
     }
     #skills {
         margin-left: 0;
@@ -120,9 +122,32 @@
     .skills-grid {
         justify-content: center;
     }
+    .butdiv{
+        display: flex;
+        margin-left: -39px;
+        gap: 13px
+    }
+    
 }
 
 .addtxt{
     color: white;
     opacity: 0.6;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
